@@ -28,5 +28,5 @@ out/
 .vscode/
 
 ### ETC ###
-db/
+data/
 .jpb/
