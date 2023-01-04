@@ -1,0 +1,13 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  h2:
+    console:
+      enabled: true
+  flyway:
+    enabled: false
+    validate-on-migrate: true
+    encoding: UTF-8
