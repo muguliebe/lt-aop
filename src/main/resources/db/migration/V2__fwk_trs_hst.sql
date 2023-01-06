@@ -4,7 +4,7 @@ create table if not exists fwk_trs_hst
     gid              varchar(255)             not null,
     method           varchar(6),
     path             varchar(200),
-    status_code      varchar(3),
+    stat_code        varchar(3),
     start_time       varchar(6),
     end_time         varchar(6),
     elapsed          varchar(11),
@@ -12,7 +12,7 @@ create table if not exists fwk_trs_hst
     query_string     varchar(4000),
     body             json,
     referrer         varchar(200),
-    error_message    varchar(2000),
+    err_msg          varchar(2000),
     create_user_id   varchar(11),
     create_dt        timestamp with time zone not null
 );

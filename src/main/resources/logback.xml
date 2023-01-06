@@ -14,15 +14,19 @@
         <withJansi>true</withJansi>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>[%yellow(%d{HH:mm:ss.SSS}):%highlight(%-5p):%cyan(%-50.50c{15}:%-5L)] %m%n</pattern>
+            <pattern>[%yellow(%d{HH:mm:ss.SSS}):%highlight(%-5p):%cyan(%-50.50c:%-5L)] %m%n</pattern>
         </encoder>
     </appender>
 
     <!-- 3rd party -->
     <logger name="org.hibernate" level="info" additivity="false"/>
     <logger name="com.example.ltaop.jpa" level="info" additivity="true"/>
+    <logger name="org.springframework" level="info" additivity="true"/>
+    <logger name="_org.springframework" level="info" additivity="true"/>
+    <logger name="com.zaxxer" level="info" additivity="true"/>
+    <logger name="org.flywaydb" level="info" additivity="true"/>
 
-    <root level="info">
+    <root level="debug">
         <appender-ref ref="console"/>
     </root>
 

@@ -12,6 +12,7 @@ lecture for aspect oriented programming
     - fileDB 로 사용하며, 프로젝트 내 ./db 에 위치
     - 스프링 부트 구동 시, flyway 로 스키마 생성
       - src/main/resources/db.migration 에 위치
+    - jdbc:h2:file:/{프로젝트위치}/data/test;AUTO_SERVER=TRUE
 
 ### JDK 설치 ( by SDKMan)
 1. SDKMan 설치 파일 다운로드
