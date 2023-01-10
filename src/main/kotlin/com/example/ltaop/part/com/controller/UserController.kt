@@ -27,14 +27,15 @@ class UserController {
     @GetMapping
     fun getListUser() = service.getListUser()
 
+
     /**
      * 사용자 단건 조회
      */
     @GetMapping("/{id}")
     fun getListUser(@PathVariable id: Int): ComUserMst {
         val optUser = service.getUser(id)
-        if(optUser.isEmpty)
-            throw ResponseStatusException(HttpStatus.NOT_FOUND, "There is no user : $id")
+//        if(optUser.isEmpty())
+//            throw ResponseStatusException(HttpStatus.NOT_FOUND, "There is no user : $id")
 
         return optUser.get()
     }

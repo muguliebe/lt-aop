@@ -1,4 +1,13 @@
+### users
 GET localhost:8080/users
 
-###
-GET localhost:8080/users/5
+### users/id
+GET localhost:8080/users/1
+
+> {% client.global.set("abc", response.body.abc); %};
+
+### create user
+POST localhost:8080/users
+Authorization: {{abc}}
+
+

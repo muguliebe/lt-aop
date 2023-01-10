@@ -28,8 +28,8 @@ class UserService {
      */
     fun updateUserNm(id: Int, name: String): UserRepo {
         val optUser = repoUser.findById(id)
-        if(optUser.isEmpty)
-            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "There is no user : $id")
+//        if(optUser.isEmpty)
+//            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "There is no user : $id")
 
         val user = optUser.get()
         user.userNm = name
@@ -44,8 +44,8 @@ class UserService {
      */
     fun deleteUser(id: Int): ComUserMst {
         val optUser = repoUser.findById(id)
-        if(optUser.isEmpty)
-            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "There is no user : $id")
+//        if(optUser.isEmpty)
+//            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "There is no user : $id")
 
         val user = optUser.get()
         user.useYn = "N"
