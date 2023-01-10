@@ -17,4 +17,5 @@ data class ComUserMst(
     var updateUserId: Int? = null,
     var createDt: OffsetDateTime? = null,
     var updateDt: OffsetDateTime? = null,
-)
+) {
+}

@@ -35,6 +35,9 @@ dependencies {
     implementation 'org.flywaydb:flyway-core:9.10.2'
     implementation 'com.h2database:h2'
 
+    // etc
+    implementation 'com.auth0:java-jwt:3.8.1'
+
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

@@ -10,4 +10,18 @@ GET localhost:8080/users/1
 POST localhost:8080/users
 Authorization: {{abc}}
 
+### users/id
+GET localhost:8080/users/1
+Content-Type: application/json
 
+{
+  "abc": "good job"
+}
+
+### auth/sign-in
+POST {{url}}/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "1@a.com"
+}

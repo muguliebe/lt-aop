@@ -1,5 +1,8 @@
 package com.example.ltaop.part.com.controller
 
+import com.example.fwk.core.base.BaseController
+import com.example.fwk.core.base.KkbController
+import com.example.fwk.custom.pojo.Commons
 import com.example.ltaop.entity.ComUserMst
 import com.example.ltaop.part.com.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,17 +18,21 @@ import java.util.*
 /**
  * 사용자 정보 조회
  */
-@RestController
+@KkbController
 @RequestMapping("/users")
-class UserController {
+class UserControlle: BaseController() {
 
     @Autowired lateinit var service: UserService
+    @Autowired lateinit var common: Commons
+
 
     /**
      * 사용자 다건 조회
      */
     @GetMapping
-    fun getListUser() = service.getListUser()
+    fun getListUser(): MutableIterable<ComUserMst> {
+        return service.getListUser()
+    }
 
 
     /**
@@ -37,6 +44,7 @@ class UserController {
 //        if(optUser.isEmpty())
 //            throw ResponseStatusException(HttpStatus.NOT_FOUND, "There is no user : $id")
 
+        println(">>> ${common.area.gid}")
         return optUser.get()
     }
 

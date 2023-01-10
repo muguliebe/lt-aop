@@ -20,7 +20,10 @@ import javax.persistence.EntityManagerFactory
 import javax.sql.DataSource
 
 @Configuration
-@EnableJpaRepositories(basePackages = ["com.example.ltaop.jpa"],
+@EnableJpaRepositories(basePackages = [
+    "com.example.ltaop.jpa",
+    "com.example.fwk.custom.jpa",
+                                      ],
         entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "publicTransactionManager")
 class H2DataSource {
@@ -70,7 +73,7 @@ class H2DataSource {
         val em = LocalContainerEntityManagerFactoryBean()
         em.dataSource = dataSource
         em.jpaVendorAdapter = vendorAdapter
-        em.setPackagesToScan("com.example.ltaop.entity")
+        em.setPackagesToScan("com.example.ltaop.entity", "com.example.fwk.custom.entity")
         em.setJpaPropertyMap(properties)
 
         return em
